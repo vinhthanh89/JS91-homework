@@ -1,0 +1,10 @@
+.name,.level{
+    color : whitesmoke
+}
+
+.studenInfo{
+    width: 300px;
+    padding-bottom: 30px;
+    background-color: green;
+    border-radius: 10px;
+}
