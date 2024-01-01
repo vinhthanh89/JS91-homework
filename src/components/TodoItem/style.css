@@ -1,0 +1,65 @@
+.task-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 430px;
+    background-color: whitesmoke;
+    padding: 0px 20px;
+    border-radius: 8px;
+}
+
+.task{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.task-item button{
+    border: none;
+}
+
+.uncomplete{
+    color:gray;
+    font-size: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.complete{
+    color:rgb(186, 73, 73);
+    font-size: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.task button:hover{
+    opacity: 0.7;
+}
+
+
+.unfinish{
+    font-weight: 600;
+    color: black;
+}
+.finish{
+    font-weight: 600;
+    color: gray;
+    text-decoration: line-through;
+}
+.edit-item{
+    margin-right: 10px;
+}
+
+.edit-button{
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
+    color: rgb(69, 61, 61);
+    opacity: 0.7;
+}
+.edit-button:hover{
+    opacity: 1;
+}
