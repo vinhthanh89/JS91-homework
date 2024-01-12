@@ -4,17 +4,20 @@ const TODOS = [
     {
         id: uuidv4(),
         task: "Doing homework",
-        isCompleted: false
+        isCompleted: false,
+        isEdited: false
     },
     {
         id: uuidv4(),
         task: "Gym",
-        isCompleted: false
+        isCompleted: false,
+        isEdited: false
     },
     {
         id: uuidv4(),
         task: "Read Book",
-        isCompleted: false
+        isCompleted: false,
+        isEdited: false
     },
 ]
 

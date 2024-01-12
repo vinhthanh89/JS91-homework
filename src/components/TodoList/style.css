@@ -6,6 +6,14 @@
     align-items: center;
 }
 
+.task__container{
+    width: 100%;
+}
+
+.add-item__container{
+    margin-top: 10px;
+}
+
 .add-button{
     width: 470px;
     height: 70px;
@@ -19,7 +27,6 @@
     border-radius: 7px;
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    margin-top: 10px;
     font-size: 18px;
 }
 

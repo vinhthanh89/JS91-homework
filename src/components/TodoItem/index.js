@@ -1,31 +1,85 @@
-import { CheckCircleFill, XCircleFill } from "react-bootstrap-icons";
+import { CheckCircleFill, ThreeDotsVertical } from "react-bootstrap-icons";
+import { useState } from "react";
+
 import "./style.css";
 
-const TodoItem = (props) => {
-  const hanleClick = () => {
-    props.handleIsComplete(props.id);
-    console.log(props);
-  }
-  
-  const hanleRemoveTask = () => {
-    props.hanleDelete(props.id);
-  }
+const TodoItem = ({
+  todo,
+  handleIsComplete,
+  handleIsEdited,
+  hanleDelete,
+  handleEditTask,
+}) => {
+  const { id, task, isCompleted, isEdited } = todo;
+  const [newTask, setNewTask] = useState(task);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleEditTask(id, newTask);
+    handleIsEdited(id);
+  };
+
+  const handleChange = (event) => {
+    setNewTask(event.target.value);
+  };
 
   return (
-    <div className="task-item">
-      <div className="task">
-        <div onClick={hanleClick} className={`${props.isCompleted ? "complete" : "uncomplete"}`}>
-          <CheckCircleFill />
+    <div className="task-item__container">
+      {isEdited ? (
+        <div className="edit-item__container">
+          <form onSubmit={handleSubmit}>
+            <div className="input-container">
+              <input type="text" value={newTask} onChange={handleChange} />
+            </div>
+            <div className="button__container">
+              <div className="button-delete">
+                <button
+                  type="button"
+                  onClick={() => hanleDelete(id)}
+                  className="button"
+                >
+                  Delete
+                </button>
+              </div>
+              <div className="button-edit">
+                <button
+                  type="reset"
+                  value={newTask}
+                  onClick={() => handleIsEdited(id)}
+                  className="button"
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="button btn-save">
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div className={`${props.isCompleted ? "finish" : "unfinish"}`}>
-          <span>{props.task}</span>
+      ) : (
+        <div className="task-item">
+          <div className="task">
+            <div className={`checkBox ${isCompleted ? "completed" : ""}`}>
+              <CheckCircleFill
+                onClick={() => {
+                  handleIsComplete(id);
+                }}
+              />
+            </div>
+            <div className={`todo-task ${isCompleted ? "finish" : ""}`}>
+              <span>{task}</span>
+            </div>
+          </div>
+          <div className="edit-button">
+            <ThreeDotsVertical
+              onClick={() => {
+                handleIsEdited(id);
+              }}
+            />
+          </div>
         </div>
-      </div>
-      <div onClick={hanleRemoveTask} className="edit-item">
-        <div className="edit-button">
-          <XCircleFill />
-        </div>
-      </div>
+      )}
     </div>
   );
 };
