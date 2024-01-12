@@ -1,0 +1,29 @@
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.logo{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+}
+.theme-button button{
+  cursor: pointer;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+
+.light-button{
+  color: rgb(186, 73, 73);
+}
+
+.dark-button{
+  color: rgb(35 39 47);
+}
