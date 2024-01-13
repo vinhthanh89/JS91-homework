@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/myprofile" element={<MyProfile />} />
+            <Route path="/my-profile" element={<MyProfile />} />
           </Routes>
 
           {/* <TodoItem todo="do homework"/> */}
