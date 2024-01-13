@@ -63,7 +63,7 @@ const Header = () => {
               className={`btn ${
                 theme === "light" ? "light" : "dark"
               }`}
-              to="/profile"
+              to="/my-profile"
             >
               Profile
             </NavLink>

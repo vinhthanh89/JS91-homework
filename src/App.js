@@ -4,9 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 // import TodoList from "./components/TodoList";
 import ThemeContext from "./Contexts/ThemeContext";
+import Header from "./components/Header";
 import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
-import Header from "./components/Header";
+import MyProfile from "./Pages/MyProfile";
 // import UserForm from './components/UserForm';
 // import TotalUser from './components/TotalUser';
 // import Profile from './components/Profile';
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/welcome" element={<Welcome />} />
+            <Route path="/my-profile" element={<MyProfile />} />
           </Routes>
 
           {/* <TodoItem todo="do homework"/> */}
