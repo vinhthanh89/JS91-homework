@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    width: 490px;
 }
 
 .logo{
@@ -20,10 +20,51 @@
   font-size: 20px;
 }
 
+.row-box{
+  width: 100%;
+  height: 1px;
+  margin-bottom: 10px;
+}
+
 .light-button{
-  color: rgb(186, 73, 73);
+  color: rgb(255, 255, 255);
 }
 
 .dark-button{
   color: rgb(35 39 47);
 }
+
+.row-box.light{
+  background-color: rgb(35 39 47);
+}
+
+.row-box.dark{
+  background-color: rgb(255, 255, 255);   
+}
+
+
+.nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+
+}
+
+.nav li a{
+  text-decoration: none;
+
+}
+
+.active{
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.light.active{
+  background-color: whitesmoke;
+}
+
+.dark.active{
+  background-color: rgb(186, 73, 73);
+}
+
