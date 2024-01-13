@@ -46,7 +46,7 @@ const Header = () => {
               className={`btn ${theme === "light" ? "light" : "dark"}`}
               to="/"
             >
-              Home
+              Todo
             </NavLink>
           </li>
           <li>
@@ -64,7 +64,7 @@ const Header = () => {
               className={`btn ${
                 theme === "light" ? "light" : "dark"
               }`}
-              to="/profile"
+              to="/myprofile"
             >
               Profile
             </NavLink>
