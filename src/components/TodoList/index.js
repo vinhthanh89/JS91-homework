@@ -4,7 +4,6 @@ import "./style.css";
 import TodoItem from "../TodoItem";
 import TODOS from "../../Data/todos";
 import AddTodo from "../AddTodo";
-import Header from "../Header";
 
 const TodoList = () => {
   const [todos, setTodos] = useState(TODOS);
@@ -63,7 +62,6 @@ const TodoList = () => {
 
   return (
       <div className="todo-list__container">
-        <Header />
         <div className="todo-list">{renderTodoList}</div>
         <AddTodo handleAddTodo={handleAddTodo} />
       </div>

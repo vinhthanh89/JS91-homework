@@ -1,8 +1,12 @@
 // import logo from './logo.svg';
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import TodoList from "./components/TodoList";
+// import TodoList from "./components/TodoList";
 import ThemeContext from "./Contexts/ThemeContext";
+import Home from "./Pages/Home";
+import Welcome from "./Pages/Welcome";
+import Header from "./components/Header";
 // import UserForm from './components/UserForm';
 // import TotalUser from './components/TotalUser';
 // import Profile from './components/Profile';
@@ -12,18 +16,16 @@ import ThemeContext from "./Contexts/ThemeContext";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  // const [users , setUsers] = useState([]);
-
-  // const handleUserSubmitted = (newUser) =>{
-  //   setUsers([...users,newUser])
-  // }
-  // console.log(users);
 
   return (
     <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
       <div className="App">
-        <header className={`App-header ${theme ? "light" : "dark"}`}>
-          <TodoList />
+        <header className={`App-header ${theme === "light" ? "light" : "dark"}`}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/welcome" element={<Welcome />} />
+          </Routes>
 
           {/* <TodoItem todo="do homework"/> */}
           {/* <UserForm addSubmitUser={handleUserSubmitted}/>
