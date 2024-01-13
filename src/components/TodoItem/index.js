@@ -24,6 +24,11 @@ const TodoItem = ({
     setNewTask(event.target.value);
   };
 
+  const handleCancle = () => {
+    setNewTask(task);
+    handleIsEdited(id);
+  }
+
   return (
     <div className="task-item__container">
       {isEdited ? (
@@ -46,7 +51,7 @@ const TodoItem = ({
                 <button
                   type="reset"
                   value={newTask}
-                  onClick={() => handleIsEdited(id)}
+                  onClick={handleCancle}
                   className="button"
                 >
                   Cancel
