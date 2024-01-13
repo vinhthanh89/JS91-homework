@@ -7,7 +7,6 @@ import ThemeContext from "../../Contexts/ThemeContext";
 
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme);
 
   return (
     <div className="header">
