@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Home from "./Pages/Home";
 import Welcome from "./Pages/Welcome";
 import MyProfile from "./Pages/MyProfile";
+import AboutMe from "./Pages/AboutMe";
+import Skill from "./Pages/Skill";
 // import UserForm from './components/UserForm';
 // import TotalUser from './components/TotalUser';
 // import Profile from './components/Profile';
@@ -26,7 +28,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/my-profile" element={<MyProfile />} />
+            <Route path="/my-profile" element={<MyProfile />}>
+              <Route path="" element={<AboutMe />} />
+              <Route path="skill" element={<Skill />} />
+            </Route>
           </Routes>
 
           {/* <TodoItem todo="do homework"/> */}

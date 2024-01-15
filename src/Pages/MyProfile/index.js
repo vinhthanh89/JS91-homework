@@ -1,16 +1,11 @@
-import {Link} from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 const MyProfile = () => {
-    return (
-        <ul>
-            <li>
-                <Link to >About Me</Link>
-            </li>
-            <li>
-                <Link to >Name</Link>
-            </li>
-        </ul>
-    )
-}
+  return (
+    <div className="nav myprofile__menu">      
+      <Outlet />
+    </div>
+  );
+};
 
 export default MyProfile;
