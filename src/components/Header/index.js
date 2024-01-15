@@ -1,6 +1,6 @@
 import { CheckCircleFill, Sun, MoonFill } from "react-bootstrap-icons";
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import "./style.css";
 import ThemeContext from "../../Contexts/ThemeContext";
@@ -51,29 +51,41 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className={`btn ${
-                theme === "light" ? "light" : "dark"
-              }`}
+              className={`btn ${theme === "light" ? "light" : "dark"}`}
               to="/welcome"
             >
               Welcome
             </NavLink>
           </li>
-          <li>
+          <li className="dropdown">
             <NavLink
-              className={`btn ${
-                theme === "light" ? "light" : "dark"
-              }`}
+              className={`btn ${theme === "light" ? "light" : "dark"}`}
               to="/my-profile"
             >
               Profile
             </NavLink>
+            <ul className={`dropdown-content ${theme === "light" ? "light" : "dark"}`}>
+              <li>
+                <Link
+               className={`dropdown-item ${theme === "light" ? "light" : "dark"}`}
+                  to="/my-profile"
+                >
+                  About Me
+                </Link>
+              </li>
+              <li>
+                <Link
+                className={`dropdown-item ${theme === "light" ? "light" : "dark"}`}
+                  to="/my-profile/skill"
+                >
+                  Skill
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
-      <div
-        className={`row-box ${theme === "light" ? "light" : "dark"}`}
-      ></div>
+      <div className={`row-box ${theme === "light" ? "light" : "dark"}`}></div>
     </div>
   );
 };
